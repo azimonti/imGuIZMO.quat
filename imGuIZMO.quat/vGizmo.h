@@ -85,7 +85,7 @@ public:
         if(delta.x == 0 && delta.y == 0) update();
         delta.x = delta.y = 0;
     }
-    void inline testRotModifier(int x, int y, vgModifiers mod) { }
+    void inline testRotModifier(int x, int y, vgModifiers mod) { (void)x; (void)y; (void)mod; }
     
     //    Call on mouse button event
     //      button:  your mouse button
@@ -373,6 +373,7 @@ public:
     //    Call on wheel (only for Dolly/Zoom)
     ////////////////////////////////////////////////////////////////////////////
     void wheel( T x, T y) {
+        (void)x;
         dolly.z += y * dollyScale * T(5);
     }
 
